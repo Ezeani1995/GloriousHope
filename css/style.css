@@ -809,16 +809,17 @@ body {
 
   .showcase .showcase-inner .showcase-text {
     width: 100%;
-    margin-top: 100px;
+    margin-top: 80px;
   }
 
   .showcase .showcase-inner .showcase-text h1 {
-    font-size: 35px;
+    font-size: 30px;
     margin-bottom: 20px;
   }
 
   .showcase .showcase-inner .showcase-text p {
     width: 100%;
+    font-size: 13px;
   }
 
   .about .about-inner,
