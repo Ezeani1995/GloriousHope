@@ -1,0 +1,864 @@
+/*=======================================================
+        BASIC STYLING 
+=======================================================*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: Roboto;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  src: url(../Poppins-Bold.otf);
+  font-family: Poppins;
+}
+
+@font-face {
+  src: url(../Roboto-Regular.ttf);
+  font-family: Roboto;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  color: #333;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  background: #f1f1f1;
+  position: relative;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/*=============================================================
+            HEADER SECTION 
+=============================================================*/
+.header {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.header img {
+  width: 80px;
+  height: 80px;
+}
+
+.header .header-top,
+.header .header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+}
+
+.header .header-top {
+  background: dodgerblue;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.header .header-bottom {
+  background: #fff;
+  color: #333;
+}
+
+.header .header-bottom .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .header-bottom .logo .text {
+  margin-left: 10px;
+}
+
+.header .header-bottom .logo .text h1 {
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.header .header-bottom .logo .text p {
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.header .header-bottom i {
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+}
+
+.header .header-bottom nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.header .header-bottom nav ul li a {
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.5s ease-in-out;
+}
+
+.header .header-bottom nav ul li a:hover {
+  color: dodgerblue;
+}
+
+/*========================================================
+        SHOWCASE SECTION
+=======================================================*/
+.showcase {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url(../img/bp2.png) no-repeat center center/cover;
+  height: 530px;
+  color: #fff;
+}
+
+.showcase .showcase-inner .showcase-text {
+  margin-top: 120px;
+  width: 70%;
+}
+
+.showcase .showcase-inner .showcase-text h1 {
+  font-size: 45px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.showcase .showcase-inner .showcase-text h1 span {
+  color: dodgerblue;
+}
+
+.showcase .showcase-inner .showcase-text p {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 15px 0 40px;
+  line-height: 30px;
+  letter-spacing: 1px;
+  width: 80%;
+}
+
+.showcase .showcase-inner .showcase-text a {
+  color: #fff;
+  background: dodgerblue;
+  display: inline-block;
+  padding: 15px 35px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  transition: all 0.5s ease-in;
+}
+
+.showcase .showcase-inner .showcase-text a:hover {
+  color: dodgerblue;
+  background: #fff;
+}
+
+/*===========================================================
+        ABOUT SECTION 
+==========================================================*/
+.about {
+  padding: 50px 0;
+  color: #333;
+  background: #fff;
+}
+
+.about .about-inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+
+.about .about-inner .about-text h1 {
+  font-weight: 600;
+  font-size: 30px;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.about .about-inner .about-text li {
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 10px;
+  list-style: square;
+  line-height: 1.6;
+}
+
+.about .about-inner .about-text a {
+  display: inline-block;
+  padding: 15px 35px;
+  background: dodgerblue;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.about .about-inner .about-text a:hover {
+  transform: scale(0.96);
+}
+
+/*=============================================================
+            SERVICES SECTION 
+============================================================*/
+.services {
+  padding: 50px 0;
+  color: #333;
+  text-align: center;
+}
+
+.services h1 {
+  position: relative;
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.services h1::before {
+  position: absolute;
+  content: "";
+  background: dodgerblue;
+  width: 80px;
+  height: 2px;
+  top: 40px;
+  left: calc(50% - 40px);
+}
+
+.services h1::after {
+  position: absolute;
+  content: "";
+  background: orange;
+  width: 10px;
+  height: 10px;
+  top: 36px;
+  left: calc(50% - 8px);
+  border-radius: 50%;
+}
+
+.services p {
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.services .services-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.services .services-inner .services-content {
+  padding: 50px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  box-shadow: 0 2px 5px rgba(191, 191, 191, 0.6);
+}
+
+.services .services-inner .services-content:hover {
+  background: dodgerblue;
+  color: #fff;
+}
+
+.services .services-inner .services-content i {
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+.services .services-inner .services-content h3 {
+  font-weight: 600;
+}
+
+/*==========================================================
+            OBJECTIVES SECTION
+=========================================================*/
+.objectives {
+  padding: 50px 0;
+  color: #333;
+  background: #fff;
+}
+
+.objectives .objectives-inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+}
+
+.objectives .objectives-inner > div {
+  padding: 50px;
+}
+
+.objectives .objectives-inner > div h1 {
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.objectives .objectives-inner > div p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.objectives .objectives-inner .mission {
+  background: dodgerblue;
+  color: #fff;
+}
+
+.objectives .objectives-inner .vision {
+  background: orange;
+  color: #fff;
+}
+
+/*=========================================================
+            TEAM SECTION 
+=========================================================*/
+.team {
+  padding: 50px 0;
+  color: #333;
+  text-align: center;
+}
+
+.team h1 {
+  position: relative;
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.team h1::before {
+  position: absolute;
+  content: "";
+  background: dodgerblue;
+  width: 80px;
+  height: 2px;
+  top: 40px;
+  left: calc(50% - 40px);
+}
+
+.team h1::after {
+  position: absolute;
+  content: "";
+  background: orange;
+  width: 10px;
+  height: 10px;
+  top: 36px;
+  left: calc(50% - 8px);
+  border-radius: 50%;
+}
+
+.team .team-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+
+.team .team-inner .team-member {
+  background: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.team .team-inner .team-img {
+  position: relative;
+}
+
+.team .team-inner .team-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.team .team-inner .team-img .team-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.team .team-inner .team-member:hover .team-img .team-overlay {
+  opacity: 1;
+}
+
+.team
+  .team-inner
+  .team-member:hover
+  .team-img
+  .team-overlay
+  .socials
+  .fa-facebook-f:hover {
+  color: #3b5998;
+}
+
+.team
+  .team-inner
+  .team-member:hover
+  .team-img
+  .team-overlay
+  .socials
+  .fa-twitter:hover {
+  color: #55acee;
+}
+
+.team
+  .team-inner
+  .team-member:hover
+  .team-img
+  .team-overlay
+  .socials
+  .fa-instagram:hover {
+  color: #bc2a8d;
+}
+
+.team
+  .team-inner
+  .team-member:hover
+  .team-img
+  .team-overlay
+  .socials
+  .fa-whatsapp:hover {
+  color: #34bf49;
+}
+
+.team .team-inner .team-img .team-overlay .socials i {
+  font-size: 25px;
+  margin: 0 5px;
+  color: #fff;
+}
+
+.team .team-inner .team-member .member-info {
+  padding: 10px 0px 20px;
+}
+
+.team .team-inner .team-member .member-info h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.team .team-inner .team-member .member-info h5 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.team .team-inner .team-member .member-info > div {
+  height: 10px;
+  width: 10px;
+  background: orange;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+/*=========================================================
+            SPONSORS SECTION
+=========================================================*/
+.sponsors {
+  background: #fff;
+  color: #333;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.sponsors h1 {
+  position: relative;
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.sponsors h1::before {
+  position: absolute;
+  content: "";
+  background: dodgerblue;
+  width: 80px;
+  height: 2px;
+  top: 40px;
+  left: calc(50% - 40px);
+}
+
+.sponsors h1::after {
+  position: absolute;
+  content: "";
+  background: orange;
+  width: 10px;
+  height: 10px;
+  top: 36px;
+  left: calc(50% - 8px);
+  border-radius: 50%;
+}
+
+.sponsors .sponsors-inner {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 30px;
+}
+
+/*=========================================================
+            CONTACT SECTION
+========================================================*/
+.contact {
+  padding: 50px 0;
+  color: #333;
+}
+
+.contact .contact-inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+
+.contact .contact-inner .contact-info {
+  margin-top: 50px;
+}
+
+.contact .contact-inner .contact-info h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #555;
+}
+
+.contact .contact-inner .contact-info h1 {
+  font-size: 35px;
+  margin: 20px 0;
+  font-weight: 600;
+}
+
+.contact .contact-inner .contact-info p {
+  color: #777;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.contact .contact-inner .contact-info p i {
+  margin-right: 10px;
+}
+
+.contact .contact-inner .contact-info p b {
+  color: #333;
+}
+
+.contact .contact-inner .contact-form input,
+.contact .contact-inner .contact-form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  outline: none;
+  border: none;
+  padding-left: 10px;
+  font-weight: 600;
+  color: #333;
+  background: #fff;
+}
+
+.contact .contact-inner .contact-form input {
+  height: 50px;
+}
+
+.contact .contact-inner .contact-form input::placeholder,
+.contact .contact-inner .contact-form textarea::placeholder {
+  opacity: 0.8;
+  letter-spacing: 1px;
+}
+
+.contact .contact-inner .contact-form textarea {
+  padding-top: 10px;
+}
+
+.contact .contact-inner .contact-form button {
+  display: inline-block;
+  padding: 15px 35px;
+  background: dodgerblue;
+  color: #fff;
+  margin-top: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: transform 0.5s ease-in-out;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.contact .contact-inner .contact-form button:hover {
+  transform: scale(0.96);
+}
+
+/*======================================================
+            FOOTER SECTION
+=====================================================*/
+.footer {
+  color: #fff;
+  background: #333;
+}
+
+.footer .footer-top {
+  padding: 30px 0;
+}
+
+.footer .footer-top .footer-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+
+.footer .footer-top h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.footer .footer-top .footer-inner .footer-about p {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-top: 30px;
+}
+
+.footer .footer-top .footer-inner .footer-services li {
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #f1f1f1;
+}
+
+.footer .footer-top .footer-inner .footer-gallery .gallery-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+}
+
+.footer
+  .footer-top
+  .footer-inner
+  .footer-gallery
+  .gallery-inner
+  .gallery-content
+  img {
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+.footer
+  .footer-top
+  .footer-inner
+  .footer-gallery
+  .gallery-inner
+  .gallery-content
+  img:hover {
+  opacity: 0.7;
+}
+
+.footer .footer-top .footer-inner .footer-newsletter input {
+  height: 50px;
+  display: block;
+  margin-bottom: 5px;
+  width: 100%;
+  padding-left: 10px;
+  color: #333;
+  background: #fff;
+  font-weight: 600;
+  border: none;
+  outline: none;
+}
+
+.footer .footer-top .footer-inner .footer-newsletter input::placeholder {
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+.footer .footer-top .footer-inner .footer-newsletter button {
+  display: inline-block;
+  padding: 12px 25px;
+  background: dodgerblue;
+  color: #fff;
+  margin-top: 5px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: transform 0.5s ease-in-out;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.footer .footer-bottom {
+  padding: 20px 0;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/*==================================================================
+            MEDIA QUERIES
+==================================================================*/
+@media (max-width: 768px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  body {
+    position: relative;
+  }
+
+  .header .header-top {
+    display: none;
+  }
+
+  .header .header-bottom {
+    padding: 15px;
+  }
+
+  .header .header-bottom .logo img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .header .header-bottom .logo .text h1 {
+    font-size: 15px;
+  }
+
+  .header .header-bottom .logo .text p {
+    font-size: 12px;
+  }
+
+  .header .header-bottom i {
+    display: block;
+  }
+
+  .header .header-bottom nav .main-list {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    width: 60%;
+    opacity: 0.9;
+    height: 100vh;
+    padding: 30px 10px 30px 30px;
+    transform: translateX(-500px);
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .header .header-bottom nav .main-list li {
+    padding: 20px 0;
+    display: block;
+  }
+
+  .header .header-bottom nav .main-list li a {
+    color: #fff;
+  }
+
+  .header .header-bottom nav .main-list li:last-child {
+    border-bottom: 0;
+  }
+
+  .header .header-bottom nav .main-list.show {
+    transform: translateX(-20px);
+  }
+
+  .showcase {
+    height: 100vh;
+  }
+
+  .showcase .showcase-inner .showcase-text {
+    width: 100%;
+    margin-top: 100px;
+  }
+
+  .showcase .showcase-inner .showcase-text h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+
+  .showcase .showcase-inner .showcase-text p {
+    width: 100%;
+  }
+
+  .about .about-inner,
+  .services .services-inner,
+  .objectives .objectives-inner,
+  .team .team-inner,
+  .sponsors .sponsors-inner,
+  .contact .contact-inner,
+  .footer .footer-top .footer-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .about .about-inner .about-text h1 {
+    font-size: 25px;
+  }
+
+  .sponsors .sponsors-inner .sponsor-info img {
+    width: 150px;
+  }
+
+  .contact .contact-inner .contact-info h3 {
+    font-size: 16px;
+  }
+
+  .contact .contact-inner .contact-info h1 {
+    font-size: 20px;
+  }
+
+  .contact .contact-inner .contact-info p {
+    font-size: 14px;
+  }
+
+  .footer .footer-top h3 {
+    font-size: 16px;
+  }
+
+  .footer .footer-top .footer-inner .footer-services li {
+    margin-bottom: 15px;
+    font-size: 15px;
+  }
+
+  .footer .footer-bottom {
+    font-size: 14px;
+  }
+}
