@@ -804,7 +804,7 @@ body {
   }
 
   .showcase {
-    height: 100vh;
+    height: inherit;
   }
 
   .showcase .showcase-inner .showcase-text {
