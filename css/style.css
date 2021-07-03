@@ -804,7 +804,8 @@ body {
   }
 
   .showcase {
-    height: inherit;
+    height: 100%;
+    padding-bottom: 50px;
   }
 
   .showcase .showcase-inner .showcase-text {
